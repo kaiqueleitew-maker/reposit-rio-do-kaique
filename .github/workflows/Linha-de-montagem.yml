@@ -10,18 +10,9 @@ jobs:
     steps:
     - name: 1. pegar o chassi do carro (código-fonte)
       uses: actions/checkout@v3
-
-    - name: 1.5. fabricar o produto
-      run: echo "este é o produto fnal!" > produto.txt
-
+      
     - name: 2. estação de build (montagem)
       run: echo "construindo o projeto... Verificando se todas as peças se encixam!"
 
     - name: 3. estação de testes (controle de qualidade)
       run: echo "rodando os testes automatizados... Verificando se a porta abre e fecha!"
-
-    - name: 4. empacotar o produto final (artefato)
-      uses: actions/upload-artifact@v3
-      with:
-      name: pacote-do-produto
-      path: produto.txt
